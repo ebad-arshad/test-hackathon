@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function RecentPostsSection() {
   const posts = [
     { title: "Is fastfood good for your body?", date: "February 28, 2022", image: "/recentPost.png" },
@@ -10,7 +12,7 @@ export default function RecentPostsSection() {
       <h3 className="text-xl font-bold mb-8">Recent Post</h3>
       {posts.map((post, index) => (
         <div key={index} className="flex items-center mb-4">
-          <img
+          <Image
             src={post.image}
             alt={post.title}
             className="w-16 h-16 object-cover mr-4"
